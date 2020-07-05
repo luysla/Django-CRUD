@@ -21,7 +21,5 @@ a{
 }
 
 .card{
-    margin: 20px;
-    width: 30%;
-    display: inline-block;
+    margin-top: 10px;
 }
