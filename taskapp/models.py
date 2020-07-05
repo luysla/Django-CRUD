@@ -9,6 +9,7 @@ class Task(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
 
     def createTask(self):
+        self.created_date = timezone.now()
         self.save()
     
     def __str__(self):
