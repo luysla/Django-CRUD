@@ -20,16 +20,18 @@
         </a>
     </nav>
     
-    <div class="container">
+    <div class="container-fluid">
     <div class="row">
     {% for task in tasks %}
-        <div class="card d-inline-block col-md-4">
+    <div class="col-md-4">
+        <div class="card w-100 d-inline-block">
             <div class="card-body">
                 <h5 class="card-title">{{ task.name }}</h5>
                 <p class="card-text">{{ task.description }}</p>
                 <p class="card-text"><small class="text-muted">{{ task.created_date }}</small></p>
             </div>
         </div>
+    </div>
     {% endfor %}
     </div>
     </div>
