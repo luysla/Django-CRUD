@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:ital@1&display=swap');
+
+*{
+    font-family: 'Zilla Slab', serif;
+}
+
+h5{
+    font-weight: bold;
+}
+
+p{
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+}
+a{
+    color: #fff;
+    font-weight: bold;
+}
+.navbar{
+    background-color: brown;
+}
+
+.card{
+    margin: 20px;
+    width: 30%;
+    display: inline-block;
+}

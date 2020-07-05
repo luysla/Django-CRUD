@@ -1,17 +1,35 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <title>TaskApp</title>
 </head>
 <body>
+    <nav class="navbar">
+        <a class="navbar-brand" href="#">Tarefas</a>
+        <a href="#"><span>
+            <svg width="1.8em" height="1.8em" color="#fff" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"/>
+                <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"/>
+              </svg>
+        </span>
+        </a>
+    </nav>
+    
+
     {% for task in tasks %}
-        <div> 
-            <h2>{{ task.name }}</h2>
-            <p>{{ task.description }}</p>
-            <p>{{ task.author }} - {{ task.created_date }}</p>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ task.name }}</h5>
+                <p class="card-text">{{ task.description }}</p>
+                <p class="card-text"><small class="text-muted">{{ task.created_date }}</small></p>
+            </div>
         </div>
     {% endfor %}
+
 </body>
 </html>
