@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from django.shortcuts import redirect
 
@@ -21,3 +21,10 @@ def task_add(request):
     else:
         form = TaskForm()
     return render(request, 'taskapp/task_add.html', { 'form': form })
+
+#def task_update(request, pk):
+
+def task_delete(request, pk):
+    task = Task.objects.get(pk=pk)
+    task.delete()
+    return redirect('index')
