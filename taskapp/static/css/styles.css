@@ -16,6 +16,27 @@ a{
     color: #fff;
     font-weight: bold;
 }
+
+a:hover{
+    color: #fff;
+}
+
 .navbar{
     background-color: brown;
+}
+
+.card{
+    margin:10px;
+}
+
+.task-form{
+    margin-top: 30px;   
+}
+
+.task-form button{
+    float: right;
+}
+
+.task-form textarea, input{
+    width: 100%;
 }

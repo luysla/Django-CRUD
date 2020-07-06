@@ -1,0 +1,13 @@
+{% extends 'taskapp/index.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="col-md6">
+        <form method="POST" class="task-form">{% csrf_token %}
+            <h2>Nova tarefa</h2>
+            {{ form.as_p }}
+            <button class="btn btn-success my-1" type="submit">Salvar</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
